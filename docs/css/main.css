@@ -1,4 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
+/* General Styling */
 body {margin: 0; padding: 0; background-color: #1D293F}
 p, h1, h2, h3, h4, h5, h6 {margin: 0}
+
+/* Card Styling */
+.card-wrapper {
+	display: grid;
+	padding: 16px;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-columns: 100%;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+}
+
+.card {
+	padding: 8px;
+	background-color: #fff /* Fix this color */;
+	border-radius: 8px
+}
+
+/* Computer Styling */
+@media and screen(max-width: 540px) {
+	.card-wrapper {}	
+}
