@@ -1,26 +1,87 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Quicksand');
 
 /* General Styling */
 body {margin: 0; padding: 0; background-color: #1D293F}
-p, h1, h2, h3, h4, h5, h6 {margin: 0}
+p, h1, h2, h3, h4, h5, h6 {margin: 0; font-family: "Open Sans Condensed", sans-serif}
+p {font-family: "Quicksand", sans-serif}
+h1 {color: #239CED; font-weight: bold}
+hr {padding: 0; margin: 4px 0 4px 0; border: none; height: 1px; background-color: #ccc}
 
 /* Card Styling */
 .card-wrapper {
 	display: grid;
 	padding: 16px;
-	grid-template-rows: auto auto auto auto auto;
-	grid-template-columns: 100%;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
 }
 
 .card {
 	padding: 8px;
-	background-color: #fff /* Fix this color */;
-	border-radius: 8px
+	background-color: #F3F6F4 /* Fix this color */;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25)
+}
+
+.card p {
+	padding: 8px
+}
+
+/* Slideshow Styling */
+.slideshow {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background-color: #000;
+	width: 100%;
+	height: 45vh;
+	overflow: hidden
+}
+
+.slideshow::before {
+	content: "<";
+	padding: 16px;
+	background-color: #000a;
+	color: #fff;
+	font-size: 64px;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 54px)
+}
+
+.slideshow::after {
+	content: ">";
+	padding: 16px;
+	background-color: #000a;
+	color: #fff;
+	font-size: 64px;
+	position: absolute;
+	right: 0;
+	top: calc(50% - 54px)
+}
+
+.slideshow:hover::before, .slideshow:hover::after {
+	cursor: pointer
+}
+
+.slideshow .slide {
+	display: block;
+	height: 100%;
+	transition: 0.3s
+}
+
+.slideshow .slide.visible {
+	display: block;
+	opacity: 1;
+}
+
+.slideshow .slide.hidden {
+	display: none;
+	opacity: 0
 }
 
 /* Computer Styling */
-@media and screen(max-width: 540px) {
-	.card-wrapper {}	
+@media screen and (min-width: 540px) {
+
 }
