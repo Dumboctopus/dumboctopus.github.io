@@ -1,14 +1,17 @@
 <style>
 	/* Basic List Styling */
+	#top-nav {position: sticky; top: 0}
 	#top-nav ul {
 		display: flex;
 		flex-direction: column;
+		position: relative;
 		justify-content: flex-end;
 		margin: 0; padding: 0;
 		position: relative;
 		background-color: #F3F6F4;
 		list-style: none;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25)
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+		z-index: 2
 	}
 	#top-nav li {
 		display: flex;
@@ -104,6 +107,6 @@
 	<div id="nav-links" class="hidden">
 		<li><a href="/">HOME</a></li>
 		<li><a href="javascript:void(0)">GOLDEN RATIO</a></li>
-		<li><a href="javascript:void(0)">DESIGN</a></li>
+		<li><a href="/design/">DESIGN</a></li>
 	</div>
 </ul>

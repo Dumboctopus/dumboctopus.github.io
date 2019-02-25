@@ -2,6 +2,7 @@ main();
 
 function main() {
 	loadStuff();
+	parallax();
 }
 
 function loadStuff() {
@@ -33,4 +34,13 @@ function nextSlide(obj, amount) {
 
 	$(slides[visibleIndex]).removeClass("hidden");
 	$(slides[visibleIndex]).addClass("visible");
+}
+
+function parallax() {
+	$(window).scroll(function(){
+		var scrollTop = $(window).scrollTop();
+		for (var i = 0; i < $(".parallax").length; i++) {
+			$(document.getElementsByClassName("parallax")[i]).css("height", "calc(" + $(document.getElementsByClassName("parallax")[i]).attr("autoheight") + " - " + scrollTop + "px)")
+		}
+	});
 }

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Design</title>
+	<script type="text/javascript" src="/docs/js/jquery.js" defer></script>
+	<script type="text/javascript" src="/docs/js/main.js" defer></script>
+	<link type="text/css" rel="stylesheet" href="/docs/css/main.css">
+	<style>
+		/* Layout and composition Styling */
+		@media screen and (min-width: 540px) {
+			#layout-comp {
+				grid-template-columns: auto 1fr 1fr;
+				grid-template-rows: 1fr 1fr 1fr;
+			}
+			#layout-comp :nth-child(1) {
+				grid-column: 1;
+				grid-row: 1 / 3
+			}
+			#layout-comp :nth-child(6) {
+				grid-column: 1 / 4;
+			}
+			.computer {display: flex}
+		}
+	</style>
+</head>
+<body>
+	<div id="top-nav"></div>
+	<div class="parallax" autoheight="50vw">
+		<div id="head">
+			<div class="image">
+			</div>
+			<div class="text">
+				<h1>Design</h1>
+				<p>Simple Concepts</p>
+				<p>Complex Products</p>
+			</div>
+		</div>
+	</div>
+	<div class="no-parallax">
+		<div id="layout-comp" class="card-wrapper" style="background-color: #1D293F">
+			<div class="text">
+				<div class="mobile">
+					<p style="font-size:64px">LAYOUT & COMPOSITION</p>
+				</div>
+				<div class="computer">
+					<p style="font-size:64px;width:48px;word-wrap:break-word;margin:8px">LAYOUT &</p>
+					<p style="font-size:64px;width:48px;word-wrap:break-word;margin:8px">COMPOSITION</p>
+				</div>
+			</div>
+			<div class="card">
+				<h1>Proximity</h1>
+				<hr>
+				<!-- Add stuff -->
+			</div>
+			<div class="card">
+				<h1>White Space</h1>
+				<hr>
+				<!-- Add stuff -->
+			</div>
+			<div class="card">
+				<h1>Alignment</h1>
+				<hr>
+				<!-- Add stuff -->
+			</div>
+			<div class="card">
+				<h1>Contrast</h1>
+				<hr>
+				<!-- Add stuff -->
+			</div>
+			<div class="card">
+				<h1>Repetition</h1>
+				<hr>
+				<!-- Add stuff -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

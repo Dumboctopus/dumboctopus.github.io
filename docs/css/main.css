@@ -7,6 +7,8 @@ p {font-family: "Quicksand", sans-serif}
 h1 {color: #239CED; font-weight: bold}
 hr {padding: 0; margin: 4px 0 4px 0; border: none; height: 1px; background-color: #ccc}
 
+.computer {display: none}
+
 /* Card Styling */
 .card-wrapper {
 	display: grid;
@@ -84,8 +86,41 @@ hr {padding: 0; margin: 4px 0 4px 0; border: none; height: 1px; background-color
 	opacity: 1;
 }
 
+/* Parallax */
+.parallax {
+	overflow: hidden
+}
+
+/* Head Styling */
+#head {
+	display: flex;
+	background-color: #F3F6F4;
+	height: 50vw
+}
+
+#head .text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+}
+
+#head .text h1 {
+	font-size: 64px
+}
+
+#head .image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
 /* Computer Styling */
 @media screen and (min-width: 540px) {
+	.mobile {display: none}
+	.computer {display: block}
 	/* Slideshow button hover styling */
 	.slideshow button.left:hover hr:nth-child(1) {transform: translateY(-6px) rotate(-30deg)}
 	.slideshow button.left:hover hr:nth-child(2) {transform: translateY(6px) rotate(30deg)}
