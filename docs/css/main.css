@@ -86,16 +86,10 @@ hr {padding: 0; margin: 4px 0 4px 0; border: none; height: 1px; background-color
 	opacity: 1;
 }
 
-/* Parallax */
-.parallax {
-	overflow: hidden
-}
-
 /* Head Styling */
 #head {
 	display: flex;
 	background-color: #F3F6F4;
-	height: 50vw
 }
 
 #head .text {
@@ -121,9 +115,14 @@ hr {padding: 0; margin: 4px 0 4px 0; border: none; height: 1px; background-color
 @media screen and (min-width: 540px) {
 	.mobile {display: none}
 	.computer {display: block}
+	#head {height: 50vw}
 	/* Slideshow button hover styling */
 	.slideshow button.left:hover hr:nth-child(1) {transform: translateY(-6px) rotate(-30deg)}
 	.slideshow button.left:hover hr:nth-child(2) {transform: translateY(6px) rotate(30deg)}
 	.slideshow button.right:hover hr:nth-child(1) {transform: translateY(-6px) rotate(30deg)}
 	.slideshow button.right:hover hr:nth-child(2) {transform: translateY(6px) rotate(-30deg)}
+	/* Parallax */
+	.parallax {
+		overflow: hidden
+	}
 }

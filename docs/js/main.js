@@ -38,9 +38,11 @@ function nextSlide(obj, amount) {
 
 function parallax() {
 	$(window).scroll(function(){
-		var scrollTop = $(window).scrollTop();
-		for (var i = 0; i < $(".parallax").length; i++) {
-			$(document.getElementsByClassName("parallax")[i]).css("height", "calc(" + $(document.getElementsByClassName("parallax")[i]).attr("autoheight") + " - " + scrollTop + "px)")
+		if($(window).width() > 540) {
+			var scrollTop = $(window).scrollTop();
+			for (var i = 0; i < $(".parallax").length; i++) {
+				$(document.getElementsByClassName("parallax")[i]).css("height", "calc(" + $(document.getElementsByClassName("parallax")[i]).attr("autoheight") + " - " + scrollTop + "px)")
+			}
 		}
 	});
 }
